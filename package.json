@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/herodevs/webflow-api#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "serverless-http": "^3.2.0"
