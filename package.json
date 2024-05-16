@@ -1,0 +1,26 @@
+{
+  "name": "herodevs-webflow-api",
+  "version": "1.0.0",
+  "description": "API for Webflow data access",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "serve": "node --env-file=.env index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herodevs/webflow-api.git"
+  },
+  "author": "HeroDevs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herodevs/webflow-api/issues"
+  },
+  "homepage": "https://github.com/herodevs/webflow-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
