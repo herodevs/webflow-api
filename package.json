@@ -21,6 +21,7 @@
   "homepage": "https://github.com/herodevs/webflow-api#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "serverless-http": "^3.2.0"
   }
 }
