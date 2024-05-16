@@ -27,7 +27,3 @@ export default async (req, context) => {
     return new Response(err, { status: 500 });
   }
 };
-
-export const config = {
-  path: "/form-redirects",
-};
