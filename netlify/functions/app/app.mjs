@@ -16,6 +16,7 @@ export default function expressApp() {
     "https://www.herodevs.com/",
     "https://herodevs.com/",
     "https://hero-devs-24601.webflow.io/",
+    "https://hd-webflow-api.netlify.app",
   ];
 
   // check origin
@@ -64,9 +65,9 @@ export default function expressApp() {
     }
   });
 
-  app.use(routerBasePath, router);
   router.use(bodyParser.json());
   router.use(bodyParser.urlencoded({ extended: true }));
+  app.use(routerBasePath, router);
 
   return app;
 }
