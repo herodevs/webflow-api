@@ -6,7 +6,7 @@ export default function expressApp() {
   const app = express();
   const router = express.Router();
   const routerBasePath = `/apiππ`;
-  const WEBFLOW_CRM_TOKEN = Netlify.env.get("WEBFLOW_CRM_TOKEN");
+  const WEBFLOW_CRM_TOKEN = process.env.WEBFLOW_CRM_TOKEN;
 
   // origins that are allowed to call the function if it is used outside of netlify team
   const allowedOrigins = [
