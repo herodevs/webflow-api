@@ -24,14 +24,13 @@ export default function expressApp() {
       // No origin means request from the browser
       if (!origin) {
         callback(null, true);
-      }
-      if (
+      } else if (
         process.env.NETLIFY_DEV === "true" ||
         allowedOrigins.includes(origin)
       ) {
         callback(null, true);
       } else {
-        callback(new Error("Not allowed by CORS: " + origin));
+        callback(new Error("Not allowed by CORS: "));
       }
     },
     optionsSuccessStatus: 200,
