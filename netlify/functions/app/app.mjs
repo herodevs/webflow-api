@@ -17,6 +17,7 @@ export default function expressApp() {
     "https://herodevs.com/",
     "https://hero-devs-24601.webflow.io/",
     "https://hd-webflow-api.netlify.app",
+    "https://hd-webflow-api.netlify.app/"
   ];
 
   // check origin
@@ -28,7 +29,7 @@ export default function expressApp() {
       ) {
         callback(null, true);
       } else {
-        callback(new Error("Not allowed by CORS"));
+        callback(new Error("Not allowed by CORS: " + origin));
       }
     },
     optionsSuccessStatus: 200,
