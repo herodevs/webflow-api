@@ -14,7 +14,21 @@ export default async (req, context) => {
       options,
     ).then((response) => response.json());
 
-    return Response.json(
+    const res = new Response();
+    const corsWhitelist = [
+      "http://localhost:3000",
+      "http://localhost:4200",
+      "https://www.herodevs.com/",
+      "https://herodevs.com/",
+      "https://hero-devs-24601.webflow.io/",
+    ];
+    if (corsWhitelist.indexOf(req.headers.origin) > -1) {
+      res.headers.append("Access-Control-Allow-Origin", req.headers.origin);
+      res.headers.append("Access-Control-Allow-Headers", "*");
+      res.headers.append("Access-Control-Allow-Methods", "*");
+    }
+
+    return res.json(
       rules.items.map((item) => ({
         ...item.fieldData,
         urlstring:
