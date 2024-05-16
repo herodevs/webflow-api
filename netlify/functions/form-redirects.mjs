@@ -14,7 +14,7 @@ export default async (req, context) => {
       options,
     ).then((response) => response.json());
 
-    return new Response(
+    return Response.json(
       rules.items.map((item) => ({
         ...item.fieldData,
         urlstring:
@@ -24,6 +24,6 @@ export default async (req, context) => {
       })),
     );
   } catch (err) {
-    return new Response(err, { status: 500 });
+    return Response.json(JSON.stringify(err), { status: 500 });
   }
 };
