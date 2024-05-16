@@ -16,13 +16,15 @@ export default function expressApp() {
     "https://www.herodevs.com/",
     "https://herodevs.com/",
     "https://hero-devs-24601.webflow.io/",
-    "https://hd-webflow-api.netlify.app",
-    "https://hd-webflow-api.netlify.app/"
   ];
 
   // check origin
   var corsOptions = {
     origin: (origin, callback) => {
+      // No origin means request from the browser
+      if (!origin) {
+        callback(null, true);
+      }
       if (
         process.env.NETLIFY_DEV === "true" ||
         allowedOrigins.includes(origin)
