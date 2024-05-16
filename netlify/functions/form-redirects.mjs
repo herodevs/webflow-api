@@ -14,6 +14,8 @@ export default async (req, context) => {
       options,
     ).then((response) => response.json());
 
+    return new Response(req.headers.origin);
+
     const res = new Response();
     const corsWhitelist = [
       "http://localhost:3000",
@@ -22,7 +24,7 @@ export default async (req, context) => {
       "https://herodevs.com/",
       "https://hero-devs-24601.webflow.io/",
     ];
-    if (corsWhitelist.indexOf(req.headers.origin) > -1) {
+    if (corsWhitelist.includes(req.headers.origin)) {
       res.headers.append("Access-Control-Allow-Origin", req.headers.origin);
       res.headers.append("Access-Control-Allow-Headers", "*");
       res.headers.append("Access-Control-Allow-Methods", "*");
