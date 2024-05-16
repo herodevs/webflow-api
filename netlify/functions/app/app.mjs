@@ -13,9 +13,9 @@ export default function expressApp() {
     "http://localhost:3000",
     "http://localhost:4200",
     "http://localhost:8000",
-    "https://www.herodevs.com/",
-    "https://herodevs.com/",
-    "https://hero-devs-24601.webflow.io/",
+    "https://www.herodevs.com",
+    "https://herodevs.com",
+    "https://hero-devs-24601.webflow.io",
   ];
 
   // check origin
